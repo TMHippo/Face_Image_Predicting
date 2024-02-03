@@ -106,27 +106,30 @@ def Predict(image):
     pred_list=[p for p,a in list(zip(prd,attr)) if a==1]
     return [{'name':label ,'percent':round(p,2)} for label,p in zip(new_labels,pred_list)]
 
-# Streamlit web app
-st.title('Celeb Attribute Predictor')
+def main():
+    st.title('Celeb Attribute Predictor')
 
-uploaded_file = st.file_uploader("Choose an image...")
+    uploaded_file = st.file_uploader("Choose an image...")
 
-if uploaded_file is not None:
-    # Transform and predict when an image is uploaded
-    image_bytes = uploaded_file.read()  
-    image = transform_image(image_bytes)
-    predictions = Predict(image)
+    if uploaded_file is not None:
+        # Transform and predict when an image is uploaded
+        image_bytes = uploaded_file.read()
+        image = transform_image(image_bytes)
+        predictions = Predict(image)
 
-    # Create two columns
-    col1, col2 = st.columns(2)
+        # Create two columns
+        col1, col2 = st.columns(2)
 
-    # Display predictions in the first column
-    with col1:
-        st.subheader('Predictions:')
-        for prediction in predictions:
-            st.write(f"{prediction['name']}: {prediction['percent']}")
+        # Display predictions in the first column
+        with col1:
+            st.subheader('Predictions:')
+            for prediction in predictions:
+                st.write(f"{prediction['name']}: {prediction['percent']}")
 
-    # Display the uploaded image in the second column
-    with col2:
-        st.subheader('Uploaded Image:')
-        st.image(Image.open(io.BytesIO(image_bytes)), caption='Uploaded Image.', use_column_width=True)
+        # Display the uploaded image in the second column
+        with col2:
+            st.subheader('Uploaded Image:')
+            st.image(Image.open(io.BytesIO(image_bytes)), caption='Uploaded Image.', use_column_width=True)
+
+if __name__ == "__main__":
+    main()

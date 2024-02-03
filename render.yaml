@@ -1,9 +1,0 @@
-services:4
-  # A Docker web service
-  - type: web
-    name: Face_Image_Retrieval
-    runtime: python
-    plan: free
-    autoDeploy: false
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app:app --host 0.0.0.0 --port 8080
