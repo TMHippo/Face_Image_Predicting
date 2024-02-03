@@ -1,5 +1,3 @@
-PIL
+Pillow
 torch
-torchvision 
-io
-torch.nn
+torchvision
