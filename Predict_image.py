@@ -4,6 +4,7 @@ import torch
 from torchvision import transforms
 import torch.nn as nn 
 import io
+import flask_app as app
 
 class CelebModel(nn.Module):
     def __init__(self,num_classes=40):
