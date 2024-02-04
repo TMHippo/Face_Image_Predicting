@@ -126,11 +126,13 @@ def main():
             st.subheader('Predictions:')
             for prediction in predictions:
                 st.write(f"{prediction['name']}: {prediction['percent']}")
+            del predictions
 
         # Display the uploaded image in the second column
         with col2:
             st.subheader('Uploaded Image:')
             st.image(Image.open(io.BytesIO(image_bytes)), caption='Uploaded Image.', use_column_width=True)
-
+            del image 
+            
 if __name__ == "__main__":
     main()
