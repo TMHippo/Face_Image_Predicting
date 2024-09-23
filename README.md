@@ -1,12 +1,31 @@
-FACIAL ATTRIBUTE PREDICTION
+# Facial Attribute Prediction
 
-Type: Class group project 
+Dự án này nhằm mục tiêu phát hiện và phân loại các thuộc tính khuôn mặt từ ảnh sử dụng học sâu. Chúng tôi đã xây dựng một trang web demo để thực hiện dự đoán.
 
-05/2023 – 07/2023
-Link: Facial attribute prediction
+## Mục Tiêu
 
-Demo: Prediction Website
+- Tạo ra các thuộc tính khuôn mặt từ ảnh.
+- Sử dụng công nghệ học sâu để phân loại các thuộc tính.
+- Cung cấp giao diện trực quan qua Streamlit.
 
-•Goal: Generate facial attribute 
-•Tool:Python and Python libraries, render dashboard with streamlit and Deep learning 
-•Result: Identify facial attributes for classification
+## Cài Đặt và Sử Dụng 
+```bash
+streamlit run app.py
+```
+
+'''
+https://webpfds.onrender.com
+'''
+
+### Yêu Cầu
+
+- Python 3.x
+- Thư viện cần thiết:
+  - Streamlit
+  - NumPy
+  - Pandas
+
+### Cài Đặt Thư Viện
+
+```bash
+pip install -r requirements.txt
