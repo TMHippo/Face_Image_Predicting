@@ -34,7 +34,6 @@ streamlit run app.py
 
 ### Usage
 
-<a href="https://webpfds.onrender.com" style="background-color: yellow; padding: 10px; border-radius: 5px; text-decoration: none;">WEB</a>
-can be used to predict faces
+Web: https://webpfds.onrender.com
 
 
